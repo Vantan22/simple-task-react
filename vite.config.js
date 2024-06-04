@@ -15,6 +15,6 @@ export default defineConfig({
       '@layouts': fileURLToPath(new URL('./src/components/layouts', import.meta.url)),
       '@common': fileURLToPath(new URL('./src/components/common', import.meta.url)),
       '@pages': fileURLToPath(new URL('./src/components/pages', import.meta.url)),
-    },
+      '@context': fileURLToPath(new URL('./src/context', import.meta.url)),},
   },
 })

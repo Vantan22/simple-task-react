@@ -5,7 +5,7 @@ const AuthForm = ({ children, title }) => {
     return (
       <div className={styles.navigation}>
         <p>Already have an account?</p>
-        <a href="/login">Login here</a>
+        <a href="/auth/login">Login here</a>
       </div>
     )
   }
@@ -21,7 +21,7 @@ const AuthForm = ({ children, title }) => {
         ) : (
           <div className={styles.navigation}>
             <p>Don’t have an account?</p>
-            <a href="/login">Sign up here</a>
+            <a href="/auth/signup">Sign up here</a>
           </div>
         )}
       </div>

@@ -1,10 +1,12 @@
-import AuthHeader from '@layouts/Header/Auth/index.jsx';
+import AuthHeader from '@layouts/Header/Auth/index.jsx'
 import styles from './auth.module.scss'
-const AuthLayout = ({children}) => {
+import { Outlet } from 'react-router-dom'
+
+const AuthLayout = ({ children }) => {
   return (
     <div className={styles.authLayout}>
-     <AuthHeader/>
-      {children}
+      <AuthHeader />
+      <Outlet />
     </div>
   )
 }
