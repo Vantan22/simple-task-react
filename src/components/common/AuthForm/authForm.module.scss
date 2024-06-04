@@ -1,0 +1,45 @@
+.authForm {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  row-gap: 24px;
+  border-radius: 8px;
+  border: 1px solid #E8ECEF;
+
+  .title {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 24px;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 3.6rem;
+    color: #252631;
+    border-bottom: 1px solid #E8ECEF;
+  }
+  .footer {
+    padding:15px 0;
+    width: 100%;
+    border-top: 1px solid #E8ECEF;
+    .navigation {
+      display: flex;
+      justify-content: center;
+      column-gap: 6px;
+      p {
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 2.1rem;
+        color: #778CA2;
+      }
+      a {
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 2.1rem;
+        color: #4D7CFE;
+      }
+    }
+  }
+}
