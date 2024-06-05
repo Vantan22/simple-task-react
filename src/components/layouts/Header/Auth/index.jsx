@@ -4,7 +4,8 @@ import styles from './index.module.scss'
 import Button from '@common/Button/index.jsx'
 
 const AuthHeader = () => {
-  const location = useLocation().pathname.split('/')[2]
+  const location = useLocation().pathname.split('/')[1]
+const active = location === 'login'
   const webName = 'Simple Task'
   return (
     <header className={styles.header}>
@@ -13,10 +14,10 @@ const AuthHeader = () => {
         <span>{webName}</span>
       </Link>
       <div className={styles.button}>
-        <Button to="/auth/login" active={location === 'login'}>
+        <Button to="/login" active={active}>
           log in
         </Button>
-        <Button to="/auth/signup" active={location === 'signup'}>
+        <Button to="/signup" active={!active}>
           sign up
         </Button>
       </div>

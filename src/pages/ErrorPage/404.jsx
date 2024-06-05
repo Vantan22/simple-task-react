@@ -1,8 +1,8 @@
-import './error.scss'
+import '@pages/ErrorPage/error.scss'
 
 const ErrorPage = () => {
   return (
-    <>
+    <div className='error-wrapper'>
       <div className="noise"></div>
       <div className="overlay"></div>
       <div className="terminal">
@@ -13,12 +13,12 @@ const ErrorPage = () => {
           The page you are looking for might have been removed, had its name changed or is temporarily unavailable.
         </p>
         <p className="output">
-          Please try to <a href="/auth/login">go back</a> or <a href="/">return to the homepage</a>.
+          Please try to <a href="/signup">go back</a> or <a href="/public">return to the homepage</a>.
         </p>
         {/*<input type='text' className='input'/>*/}
         <p className="output">Good luck.</p>
       </div>
-    </>
+    </div>
   )
 }
 

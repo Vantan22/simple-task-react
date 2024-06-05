@@ -1,33 +1,35 @@
-import AuthLayout from '@layouts/Auth/index.jsx'
 import AuthForm from '@common/AuthForm/index.jsx'
 import InputBasic from '@common/Input/InputBasic/index.jsx'
 import Button from '@common/Button/index.jsx'
-import styles from './loginPage.module.scss'
+import styles from '@pages/LoginPage/loginPage.module.scss'
 import useAuth from '@hooks/useAuth.jsx'
 import { yupResolver } from '@hookform/resolvers/yup'
-import { loginSchema } from '@/validator/validationSchemas.js'
+import { RecoverySchema } from '@/validator/validationSchemas.js'
 import { useForm } from 'react-hook-form'
+import AuthLayout from '@layouts/Auth/index.jsx'
+import {useNavigate} from 'react-router-dom';
 
 const LoginPage = () => {
+const navigate = useNavigate()
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm({
-    resolver: yupResolver(loginSchema),
+    resolver: yupResolver(RecoverySchema),
   })
   const { login } = useAuth()
   const onSubmit = async (data) => {
-    console.log(data)
     try {
       const userInfo = await login(data)
       console.log('User Logged In:', userInfo)
+      navigate('/')
     } catch (error) {
       console.error('Login error:', error)
     }
   }
   return (
-    // <AuthLayout>
+    <AuthLayout>
       <AuthForm title="Login">
         <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
           <div className={styles.wrapperInput}>
@@ -46,7 +48,7 @@ const LoginPage = () => {
           </Button>
         </form>
       </AuthForm>
-    // </AuthLayout>
+    </AuthLayout>
   )
 }
 

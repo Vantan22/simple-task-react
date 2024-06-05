@@ -6,7 +6,7 @@ const AuthLayout = ({ children }) => {
   return (
     <div className={styles.authLayout}>
       <AuthHeader />
-      <Outlet />
+      {children}
     </div>
   )
 }

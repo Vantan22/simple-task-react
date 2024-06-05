@@ -18,7 +18,11 @@ HTTP.interceptors.request.use((config) => {
 HTTP.interceptors.response.use(
   (response) => {
     // Xử lý phản hồi thành công
-    return response.data
+    return {
+      response: response.data,
+      status: response.status,
+      statusText: response.statusText,
+    }
   },
   (error) => {
     // Xử lý lỗi
@@ -26,7 +30,7 @@ HTTP.interceptors.response.use(
       const { status } = error.response
 
       if (status === 401) {
-        window.location.href = '/auth/login'
+        window.location.href = '/login'
       } else if (status === 403) {
         // Xử lý mã lỗi 403 (Forbidden)
         // Ví dụ: Hiển thị thông báo "Tài khoản không có quyền truy cập"

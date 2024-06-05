@@ -1,12 +1,18 @@
-import { Outlet, useNavigate } from 'react-router-dom'
-import {getLocalStorage} from '@/containts/LocalStorage/index.js';
-const ProtectedRoutes = () => {
+import { useEffect } from 'react';
+import { Outlet, useNavigate } from 'react-router-dom';
+import { getLocalStorage } from '@/containts/LocalStorage/index.js';
+
+const ProtectedRoutes = ({ children }) => {
 const navigate = useNavigate();
-  const isAuthenticated = getLocalStorage('token')
-console.log("isAuthenticated",isAuthenticated);
-  if (isAuthenticated) {
-    return <Outlet />
-  }
-  return navigate('/auth/login')
+const isAuthenticated = getLocalStorage('token');
+
+useEffect(() => {
+if (!isAuthenticated) {
+navigate('/login');
 }
-export default ProtectedRoutes
+}, [isAuthenticated, navigate]);
+
+return <Outlet/>;
+};
+
+export default ProtectedRoutes;

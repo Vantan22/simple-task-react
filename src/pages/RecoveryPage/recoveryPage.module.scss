@@ -1,0 +1,11 @@
+.form {
+  padding:0 24px ;
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  .wrapperInput{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+}
