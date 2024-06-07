@@ -5,20 +5,20 @@ import { Link } from 'react-router-dom'
 import { Collapse } from 'antd'
 import { menuItemNoContents, menuItems } from '@common/SideBar/containts/menuItem'
 import { useEffect, useState } from 'react'
-import {useMenuContext} from '@context/MenuProvider';
+import { useMenuContext } from '@context/MenuProvider'
 
-const SideBar = ({ isCollapsed }) => {
+const SideBar = () => {
   const { Panel } = Collapse
   const [items, setItems] = useState(menuItems)
-const {isMenuItem} = useMenuContext()
+  const { isMenuCollapse, title } = useMenuContext()
 
   useEffect(() => {
-    if (isCollapsed) {
+    if (isMenuCollapse) {
       setItems(menuItemNoContents)
     } else {
       setItems(menuItems)
     }
-  }, [isCollapsed])
+  }, [isMenuCollapse])
 
   return (
     <div className={styles.sideBar}>
