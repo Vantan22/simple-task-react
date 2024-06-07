@@ -1,19 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-*{
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Public Sans", sans-serif;
+  font-family: 'Public Sans', sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
 }
+
 a {
   text-decoration: none;
 }
+
 #app {
   background: #F8FAFB;
 }
 
 html {
   font-size: 62.5%;
+}
+
+.ant-collapse-header {
+  padding-left: 20px !important;
+  color: #778CA2 !important;
+  font-size: 1.4rem !important;
+  font-style: normal !important;
+  font-weight: 300 !important;
+  line-height: 2.1rem !important;
+}
+.ant-collapse .ant-collapse-content > .ant-collapse-content-box {
+  padding: 0 !important;
+  padding-block: 0 !important;
+}
+
+.ant-collapse-item.ant-collapse-item-active {
+  margin-bottom: 16px;
 }

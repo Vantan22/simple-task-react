@@ -1,0 +1,71 @@
+.sideBar {
+  height: 100vh;
+  width: 252px;
+  border-right: 1px solid #E8E8E8;
+
+
+  .sideBarLogo {
+    padding-top: 16px;
+    padding-left: 22px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #E8E8E8;
+
+    .logoWrapper {
+      display: flex;
+      column-gap: 10px;
+      align-items: center;
+      width: max-content;
+
+      .title {
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 2rem;
+        color: #252631;
+      }
+    }
+
+  }
+
+  .sideBarCollapse {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+  }
+
+  .sideBarGroup {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 12px;
+
+    .title, {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 22px;
+
+      h3 {
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 2.1rem;
+        color: #778CA2;
+      }
+    }
+
+    .more {
+      display: flex;
+      padding: 0 22px;
+      column-gap: 6px;
+      cursor: pointer;
+      h3 {
+        font-size: 1.2rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 1.8rem;
+        color: #778CA2;
+      }
+    }
+  }
+}

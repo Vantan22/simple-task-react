@@ -1,11 +1,11 @@
 import { Link, useLocation } from 'react-router-dom'
-import logo from '@assets/images/icon/logo.svg'
+import logo from '@icons/ic_logo.svg'
 import styles from './index.module.scss'
 import Button from '@common/Button/index.jsx'
 
 const AuthHeader = () => {
   const location = useLocation().pathname.split('/')[1]
-const active = location === 'login'
+  const active = location === 'login'
   const webName = 'Simple Task'
   return (
     <header className={styles.header}>

@@ -1,11 +1,12 @@
-import {UserProvider} from '@context/user-context.jsx';
+import { UserProvider } from '@context/user-context.jsx'
+import { MenuProvider } from '@context/MenuProvider/index.jsx'
 
 const Provider = ({ children }) => {
-return (
-  <UserProvider>
-    {children}
-  </UserProvider>
-);
-};
+  return (
+    <UserProvider>
+      <MenuProvider>{children}</MenuProvider>
+    </UserProvider>
+  )
+}
 
-export default Provider;
+export default Provider
