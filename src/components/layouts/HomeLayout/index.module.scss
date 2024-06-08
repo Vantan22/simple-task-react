@@ -3,10 +3,31 @@
   height: 100vh;
   display: flex;
   font-size: 1.6rem;
-.menu {
+.sideBar {
+  width: 76px;
+  height: 100vh;
+  border-right: 1px solid #E8E8E8;
+  &.active {
+    width: 252px;
+  }
 }
+
   .children {
     width: 100%;
-    flex: 1;
+    flex: 1 0 0;
+
+    .header {
+      position: fixed;
+      height: 65px;
+      width: 100%;
+    }
+
+    .body {
+      margin-top: 66px;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
   }
+
 }

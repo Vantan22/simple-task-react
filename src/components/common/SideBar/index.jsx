@@ -4,7 +4,7 @@ import Icon from '@common/Icon'
 import { Link } from 'react-router-dom'
 import { Collapse } from 'antd'
 import { menuItemNoContents, menuItems } from '@common/SideBar/containts/menuItem'
-import { useEffect, useState } from 'react'
+import {memo, useEffect, useState} from 'react';
 import { useMenuContext } from '@context/MenuProvider'
 
 const SideBar = () => {
@@ -33,7 +33,7 @@ const SideBar = () => {
           {items.map((item) => (
             <Panel header={item.header} key={item.key}>
               {item.children.map((child) => (
-                <SideBarItem key={child.key} content={child.content} to={child.to} icon={child.icon} />
+                <SideBarItem key={child.key} content={child.content} to={child.to} icon={child.icon}/>
               ))}
             </Panel>
           ))}
@@ -58,4 +58,4 @@ const SideBar = () => {
   )
 }
 
-export default SideBar
+export default memo(SideBar)

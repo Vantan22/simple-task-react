@@ -14,6 +14,13 @@ import ic_project from '@icons/ic_project.svg?react';
 import ic_setting from '@icons/ic_setting.svg?react';
 import ic_tasks from '@icons/ic_tasks.svg?react';
 import ic_logo from '@icons/ic_logo.svg?react';
+import headerBtn from '@icons/ic_header.svg?react';
+import Notification from '@icons/ic_notification.svg?react';
+import Search from '@icons/ic_search.svg?react';
+import App from '@icons/ic_app.svg?react';
+import users from '@icons/ic_users.svg?react';
+import sign_out from '@icons/ic_sign_out.svg?react';
+import billing from '@icons/ic_billing.svg?react';
 // Add more imports as needed
 
 const Icons = {
@@ -30,6 +37,13 @@ const Icons = {
   project:ic_project,
   setting:ic_setting,
   tasks:ic_tasks,
+  headerBtn,
+  notification:Notification,
+  search:Search,
+  app:App,
+  users,
+  signOut:sign_out,
+  billing
   // Add more Icons as needed
 };
 
