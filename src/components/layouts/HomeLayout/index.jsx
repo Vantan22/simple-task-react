@@ -23,7 +23,10 @@ const HomeLayout = () => {
   return (
     <div className={clsx(styles.sideBar, isMenuCollapse && styles.active)}>
       <div className={styles.sideBar}>
+        <div className={styles.sideBarWrapper}>
+
         <SideBar />
+        </div>
       </div>
       <div className={styles.children}>
         <div className={styles.header}>

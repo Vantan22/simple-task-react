@@ -3,14 +3,27 @@
   height: 100vh;
   display: flex;
   font-size: 1.6rem;
-.sideBar {
-  width: 76px;
-  height: 100vh;
-  border-right: 1px solid #E8E8E8;
-  &.active {
-    width: 252px;
+
+  .sideBar {
+    width: 76px;
+    height: 100vh;
+    border-right: 1px solid #E8E8E8;
+
+    .sideBarWrapper {
+      width: 76px;
+      height: 100vh;
+      margin-right: 252px;
+    }
+
+    &.active {
+      width: 252px;
+      .sideBarWrapper {
+        width: 76px;
+        height: 100vh;
+        margin-right: 76px;
+      }
+    }
   }
-}
 
   .children {
     width: 100%;
