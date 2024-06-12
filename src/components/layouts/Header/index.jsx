@@ -1,11 +1,12 @@
+import { memo } from 'react'
+import { Avatar, Popover } from 'antd'
 import { useMenuContext } from '@context/MenuProvider/index.jsx'
 import Icons from '@common/Icon'
-import { Avatar, Popover } from 'antd'
 import SideBarItemDefault from '@common/SideBar/SideBarItemDefault/index.jsx'
 import styles from './header.module.scss'
 
 const Header = () => {
-  const { title } = useMenuContext()
+  const { title, setIsMenuCollapse, isMenuCollapse } = useMenuContext()
   const content = (
     <div>
       <SideBarItemDefault content="Add new project" icon="project" />
@@ -14,10 +15,16 @@ const Header = () => {
       <SideBarItemDefault content="create new event" icon="calendar" />
     </div>
   )
+
+  const handleClick = () => {
+  setIsMenuCollapse(!isMenuCollapse);
+  }
   return (
     <header className={styles.header}>
       <div className={styles.title}>
-        <Icons.headerBtn height="24px" width="20px" style={{ cursor: 'pointer' }} />
+        <div className={styles.headerBtn} onClick={handleClick}>
+          <Icons.headerBtn height="24px" width="20px" style={{ cursor: 'pointer' }} />
+        </div>
         <h1>{title}</h1>
       </div>
       <div className={styles.headerControls}>
@@ -48,4 +55,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default memo(Header)

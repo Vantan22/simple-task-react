@@ -19,29 +19,19 @@
       height: 100vh;
       margin-right: 252px;
     }
-
-    &.active {
-      width: 252px;
-
-      .sideBarWrapper {
-        width: 76px;
-        height: 100vh;
-        margin-right: 76px;
-      }
-    }
   }
 
-  .sidebar-open {
+  .sidebarOpen {
     width: 252px;
   }
 
-  .sidebar-closed {
-    width: 60px;
+  .sidebarOpen {
+    width: 76px;
   }
 
   .content {
     margin-left: 252px;
-    height: 100vh;
+    height: calc(100vh - 65px);
     flex: 1;
 
     .body {
@@ -49,4 +39,7 @@
     }
   }
 
+  .contentIsCollapsed {
+    margin-left: 76px;
+  }
 }

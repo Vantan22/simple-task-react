@@ -1,6 +1,6 @@
 .header {
   position: sticky;
-  top: 0; /* required */
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,6 +16,12 @@
     display: flex;
     align-items: center;
     column-gap: 10px;
+
+    .headerBtn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
     h1 {
       font-size: 1.6rem;
@@ -47,7 +53,6 @@
       input {
         width: 200px;
         height: 24px;
-        //background: #F8FAFB;
         outline: none;
         border-radius: 8px;
         border: none;

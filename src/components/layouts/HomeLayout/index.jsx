@@ -1,10 +1,11 @@
-import styles from './index.module.scss'
+import { useEffect } from 'react'
 import { Outlet, useNavigate } from 'react-router-dom'
 import { getLocalStorage, removeLocalStorage } from '@/containts/LocalStorage'
-import { useEffect } from 'react'
 import SideBar from '@common/SideBar'
 import Header from '@layouts/Header/index.jsx'
 import { useMenuContext } from '@context/MenuProvider/index.jsx'
+import clsx from 'clsx'
+import styles from './index.module.scss'
 
 const HomeLayout = () => {
   const navigate = useNavigate()
@@ -21,12 +22,10 @@ const HomeLayout = () => {
 
   return (
     <div className={styles.homeLayout}>
-      <div className={styles.sideBar}>
-        <div className={styles.sideBarWrapper}>
+      <div className={clsx(styles.sideBar, { [styles.sidebarOpen]: !isMenuCollapse, [styles.sidebarOpen]: isMenuCollapse })}>
           <SideBar />
-        </div>
       </div>
-      <div className={styles.content}>
+      <div className={clsx(styles.content,isMenuCollapse && styles.contentIsCollapsed)}>
         <Header />
         <div className={styles.body}>
           <Outlet />

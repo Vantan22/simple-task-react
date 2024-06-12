@@ -124,7 +124,7 @@ export const menuItemNoContents = [
   },
   {
     key: 'EMPLOYEES',
-    header: 'Employees',
+    header: '',
     children: [
       {
         key: 'CALENDAR',
