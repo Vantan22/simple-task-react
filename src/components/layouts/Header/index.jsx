@@ -1,8 +1,8 @@
 import { memo } from 'react'
+import { Avatar, Popover } from 'antd'
 import Icons from '@common/Icon'
 import SideBarItemDefault from '@common/SideBar/SideBarItemDefault/index.jsx'
 import { useMenuContext } from '@context/MenuProvider/index.jsx'
-import { Avatar, Popover } from 'antd'
 import styles from './header.module.scss'
 
 const Header = () => {

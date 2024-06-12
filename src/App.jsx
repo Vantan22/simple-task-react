@@ -1,4 +1,5 @@
 import LoginPage from '@/pages/LoginPage/index.jsx'
+import { Route, Routes } from 'react-router-dom'
 import HomeLayout from '@layouts/HomeLayout/index.jsx'
 import ConfirmationPage from '@pages/ConfirmationPage/index.jsx'
 import DashBoardPage from '@pages/DashBoardPage/index.jsx'
@@ -6,7 +7,6 @@ import NewPasswordPage from '@pages/NewPasswordPage/index.jsx'
 import ProjectPage from '@pages/ProjectPage/index.jsx'
 import RecoveryPage from '@pages/RecoveryPage/index.jsx'
 import SignUpPage from '@pages/SignUpPage/index.jsx'
-import { Route, Routes } from 'react-router-dom'
 
 function App() {
   return (

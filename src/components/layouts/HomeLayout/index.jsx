@@ -1,10 +1,10 @@
 import { useEffect } from 'react'
-import { getLocalStorage, removeLocalStorage } from '@/containts/LocalStorage'
-import SideBar from '@common/SideBar'
-import { useMenuContext } from '@context/MenuProvider/index.jsx'
-import Header from '@layouts/Header/index.jsx'
 import clsx from 'clsx'
 import { Outlet, useNavigate } from 'react-router-dom'
+import Header from '@layouts/Header/index.jsx'
+import SideBar from '@common/SideBar'
+import { useMenuContext } from '@context/MenuProvider/index.jsx'
+import { getLocalStorage, removeLocalStorage } from '@/contains/LocalStorage'
 import styles from './index.module.scss'
 
 const HomeLayout = () => {

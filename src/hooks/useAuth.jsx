@@ -1,6 +1,6 @@
 import HTTP from '@/axios/axios-config.js'
-import { removeLocalStorage, setLocalStorage } from '@/containts/LocalStorage/index.js'
 import { useUserContext } from '@context/user-context.jsx'
+import { removeLocalStorage, setLocalStorage } from '@/contains/LocalStorage/index.js'
 
 const UseAuth = () => {
   const { dispatch } = useUserContext()

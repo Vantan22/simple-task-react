@@ -1,6 +1,6 @@
-import Icons from '@common/Icon'
-import useHover from '@hooks/useHover.jsx'
 import clsx from 'clsx'
+import useHover from '@hooks/useHover.jsx'
+import Icons from '@common/Icon'
 import styles from './sideBarItemDefault.module.scss'
 
 const SideBarItemDefault = ({ content, icon, clickHandler }) => {

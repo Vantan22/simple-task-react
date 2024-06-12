@@ -1,6 +1,6 @@
-import Icons from '@common/Icon'
 import clsx from 'clsx'
 import { Link, useLocation } from 'react-router-dom'
+import Icons from '@common/Icon'
 import styles from './sideBarItem.module.scss'
 
 const SideBarItem = ({ content, to, isDefault, icon }) => {

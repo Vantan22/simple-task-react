@@ -1,6 +1,6 @@
+import { Link, useLocation } from 'react-router-dom'
 import Button from '@common/Button/index.jsx'
 import logo from '@icons/ic_logo.svg'
-import { Link, useLocation } from 'react-router-dom'
 import styles from './index.module.scss'
 
 const AuthHeader = () => {

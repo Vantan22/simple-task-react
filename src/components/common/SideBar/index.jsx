@@ -1,11 +1,11 @@
 import { memo, useState } from 'react'
+import { Collapse } from 'antd'
+import { Link } from 'react-router-dom'
 import Icon from '@common/Icon'
 import { menuItems } from '@common/SideBar/containts/menuItem'
 import SideBarIcon from '@common/SideBar/SideBarIcon/index.jsx'
 import SideBarItem from '@common/SideBar/SideBarItem/index.jsx'
 import { useMenuContext } from '@context/MenuProvider'
-import { Collapse } from 'antd'
-import { Link } from 'react-router-dom'
 import styles from './sideBar.module.scss'
 
 const SideBar = () => {
