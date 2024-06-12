@@ -6,6 +6,7 @@ import NewPasswordPage from '@pages/NewPasswordPage/index.jsx'
 import RecoveryPage from '@pages/RecoveryPage/index.jsx'
 import HomeLayout from '@layouts/HomeLayout/index.jsx'
 import ProjectPage from '@pages/ProjectPage/index.jsx'
+import DashBoardPage from '@pages/DashBoardPage/index.jsx'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Route path="/recovery" element={<RecoveryPage />} />
       <Route path="/new-password" element={<NewPasswordPage />} />
       <Route path="/" element={<HomeLayout />}>
+        <Route index element={<DashBoardPage />} />
         <Route path="/project" element={<ProjectPage />} />
         {/*<Route exact path="/" element={<LoginPage />} />*/}
       </Route>

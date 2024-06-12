@@ -5,7 +5,12 @@
   font-size: 1.6rem;
 
   .sideBar {
-    width: 76px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 252px;
+    transition: width 0.3s;
     height: 100vh;
     border-right: 1px solid #E8E8E8;
 
@@ -17,6 +22,7 @@
 
     &.active {
       width: 252px;
+
       .sideBarWrapper {
         width: 76px;
         height: 100vh;
@@ -25,21 +31,21 @@
     }
   }
 
-  .children {
-    width: 100%;
-    flex: 1 0 0;
+  .sidebar-open {
+    width: 252px;
+  }
 
-    .header {
-      position: fixed;
-      height: 65px;
-      width: 100%;
-    }
+  .sidebar-closed {
+    width: 60px;
+  }
+
+  .content {
+    margin-left: 252px;
+    height: 100vh;
+    flex: 1;
 
     .body {
-      margin-top: 66px;
-      width: 100%;
       height: 100%;
-      overflow: hidden;
     }
   }
 

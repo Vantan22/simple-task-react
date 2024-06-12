@@ -6,7 +6,7 @@ export const menuItems = [
       {
         key: 'DASHBOARD',
         content: 'Dashboard',
-        to: '/dashboard',
+        to: '/',
         icon: 'dashboard',
       },
       {
@@ -87,7 +87,7 @@ export const menuItemNoContents = [
       {
         key: 'DASHBOARD',
         content: '',
-        to: '/dashboard',
+        to: '/',
         icon: 'dashboard',
       },
       {
