@@ -1,8 +1,8 @@
 import { memo } from 'react'
-import { Avatar, Popover } from 'antd'
-import { useMenuContext } from '@context/MenuProvider/index.jsx'
 import Icons from '@common/Icon'
 import SideBarItemDefault from '@common/SideBar/SideBarItemDefault/index.jsx'
+import { useMenuContext } from '@context/MenuProvider/index.jsx'
+import { Avatar, Popover } from 'antd'
 import styles from './header.module.scss'
 
 const Header = () => {
@@ -17,7 +17,7 @@ const Header = () => {
   )
 
   const handleClick = () => {
-  setIsMenuCollapse(!isMenuCollapse);
+    setIsMenuCollapse(!isMenuCollapse)
   }
   return (
     <header className={styles.header}>

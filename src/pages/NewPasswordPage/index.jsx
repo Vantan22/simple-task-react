@@ -1,15 +1,15 @@
-import { useForm } from 'react-hook-form'
-import { yupResolver } from '@hookform/resolvers/yup'
+import { useEffect, useState } from 'react'
+import { getLocalStorage } from '@/containts/LocalStorage/index.js'
 import { NewPasswordSchema } from '@/validator/validationSchemas.js'
+import AuthForm from '@common/AuthForm/index.jsx'
+import Button from '@common/Button/index.jsx'
+import InputBasic from '@common/Input/InputBasic/index.jsx'
+import { yupResolver } from '@hookform/resolvers/yup'
 import useAuth from '@hooks/useAuth.jsx'
 import AuthLayout from '@layouts/Auth/index.jsx'
-import AuthForm from '@common/AuthForm/index.jsx'
-import styles from './newPassword.module.scss'
-import InputBasic from '@common/Input/InputBasic/index.jsx'
-import Button from '@common/Button/index.jsx'
-import { getLocalStorage } from '@/containts/LocalStorage/index.js'
-import { useEffect, useState } from 'react'
+import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
+import styles from './newPassword.module.scss'
 
 const NewPasswordPage = () => {
   const [code, setCode] = useState('')
@@ -33,7 +33,7 @@ const NewPasswordPage = () => {
       navigate('/login')
     }
     if (status === 410) {
-    setIsCodeValid(false)
+      setIsCodeValid(false)
       alert('Reset code expired!')
     }
   }
@@ -59,7 +59,7 @@ const NewPasswordPage = () => {
     }
 
     checkCode()
-  }, [code,isCodeValid])
+  }, [code, isCodeValid])
   return (
     <AuthLayout>
       <AuthForm title="New Password">

@@ -1,7 +1,7 @@
-import styles from './button.module.scss'
 import { Link } from 'react-router-dom'
+import styles from './button.module.scss'
 
-const Button = ({ children, active, to,width, ...props }) => {
+const Button = ({ children, active, to, width, ...props }) => {
   const styledButtonActive = active ? `${styles.button} ${styles.active}` : styles.button
   if (to) {
     return (
@@ -11,7 +11,7 @@ const Button = ({ children, active, to,width, ...props }) => {
     )
   }
   return (
-    <button style={{width:width}} className={styledButtonActive} {...props}>
+    <button style={{ width: width }} className={styledButtonActive} {...props}>
       {children}
     </button>
   )

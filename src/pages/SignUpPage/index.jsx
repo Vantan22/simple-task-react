@@ -1,16 +1,16 @@
-import AuthLayout from '@layouts/Auth/index.jsx'
-import AuthForm from '@common/AuthForm/index.jsx'
-import styles from './signUpPage.module.scss'
-import InputBasic from '@common/Input/InputBasic/index.jsx'
-import Button from '@common/Button/index.jsx'
-import { useForm } from 'react-hook-form'
-import { yupResolver } from '@hookform/resolvers/yup'
 import { registerSchema } from '@/validator/validationSchemas.js'
-import useAuth from '@hooks/useAuth.jsx';
-import {useNavigate} from 'react-router-dom';
+import AuthForm from '@common/AuthForm/index.jsx'
+import Button from '@common/Button/index.jsx'
+import InputBasic from '@common/Input/InputBasic/index.jsx'
+import { yupResolver } from '@hookform/resolvers/yup'
+import useAuth from '@hooks/useAuth.jsx'
+import AuthLayout from '@layouts/Auth/index.jsx'
+import { useForm } from 'react-hook-form'
+import { useNavigate } from 'react-router-dom'
+import styles from './signUpPage.module.scss'
 
 const SignUp = () => {
-const navigate = useNavigate()
+  const navigate = useNavigate()
   const {
     register,
     handleSubmit,
@@ -21,7 +21,7 @@ const navigate = useNavigate()
 
   const { registerUser } = useAuth()
   const onSubmit = async (data) => {
-  console.log(data);
+    console.log(data)
     try {
       const userInfo = await registerUser(data)
       navigate('/confirmation')

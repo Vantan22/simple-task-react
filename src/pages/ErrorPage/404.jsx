@@ -2,7 +2,7 @@ import '@pages/ErrorPage/error.scss'
 
 const ErrorPage = () => {
   return (
-    <div className='error-wrapper'>
+    <div className="error-wrapper">
       <div className="noise"></div>
       <div className="overlay"></div>
       <div className="terminal">

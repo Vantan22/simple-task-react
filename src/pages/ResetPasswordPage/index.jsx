@@ -1,19 +1,16 @@
-import { useNavigate } from 'react-router-dom'
-import { useForm } from 'react-hook-form'
-import { yupResolver } from '@hookform/resolvers/yup'
-import { NewPasswordSchema } from '@/validator/validationSchemas.js'
 import { getLocalStorage } from '@/containts/LocalStorage/index.js'
+import { NewPasswordSchema } from '@/validator/validationSchemas.js'
+import AuthForm from '@common/AuthForm/index.jsx'
+import Button from '@common/Button/index.jsx'
+import InputBasic from '@common/Input/InputBasic/index.jsx'
+import { yupResolver } from '@hookform/resolvers/yup'
 import useAuth from '@hooks/useAuth.jsx'
 import AuthLayout from '@layouts/Auth/index.jsx'
-import AuthForm from '@common/AuthForm/index.jsx'
 import styles from '@pages/NewPasswordPage/newPassword.module.scss'
-import InputBasic from '@common/Input/InputBasic/index.jsx'
-import Button from '@common/Button/index.jsx'
-import {useEffect, useState} from 'react';
-import HTTP from '@/axios/axios-config.js'
+import { useForm } from 'react-hook-form'
+import { useNavigate } from 'react-router-dom'
 
 const ResetPasswordPage = () => {
-
   const navigate = useNavigate()
   const {
     register,
@@ -30,13 +27,11 @@ const ResetPasswordPage = () => {
     console.log(data)
   }
 
-
   return (
     <AuthLayout>
       <AuthForm title="New Password">
         <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
           <div className={styles.wrapperInput}>
-
             <InputBasic
               width="364px"
               id="email"

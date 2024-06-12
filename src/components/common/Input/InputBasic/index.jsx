@@ -1,5 +1,5 @@
-import styles from './inputBasic.module.scss'
 import { forwardRef } from 'react'
+import styles from './inputBasic.module.scss'
 
 const InputBasic = forwardRef(({ name, id, label, width, status, ...props }, ref) => {
   let borderColor

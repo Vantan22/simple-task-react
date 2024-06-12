@@ -1,9 +1,6 @@
 import HTTP from '@/axios/axios-config.js'
-import { useUserContext } from '@context/user-context.jsx'
 import { removeLocalStorage, setLocalStorage } from '@/containts/LocalStorage/index.js'
-import { useNavigate } from 'react-router-dom'
-
-
+import { useUserContext } from '@context/user-context.jsx'
 
 const UseAuth = () => {
   const { dispatch } = useUserContext()

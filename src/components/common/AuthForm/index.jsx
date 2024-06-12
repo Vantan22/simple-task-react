@@ -1,5 +1,6 @@
 import { useLocation } from 'react-router-dom'
 import styles from './authForm.module.scss'
+
 const AuthForm = ({ children, title }) => {
   const redirectLogin = () => {
     return (

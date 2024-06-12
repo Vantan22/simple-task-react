@@ -18,14 +18,17 @@
     color: #252631;
     border-bottom: 1px solid #E8ECEF;
   }
+
   .footer {
-    padding:15px 0;
+    padding: 15px 0;
     width: 100%;
     border-top: 1px solid #E8ECEF;
+
     .navigation {
       display: flex;
       justify-content: center;
       column-gap: 6px;
+
       p {
         font-size: 1.4rem;
         font-style: normal;
@@ -33,6 +36,7 @@
         line-height: 2.1rem;
         color: #778CA2;
       }
+
       a {
         font-size: 1.4rem;
         font-style: normal;
