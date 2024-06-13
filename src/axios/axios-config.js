@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { removeLocalStorage } from '@/contains/LocalStorage/index.js'
 
 // Tạo một phiên axios
 const HTTP = axios.create({
@@ -6,14 +7,9 @@ const HTTP = axios.create({
   headers: { 'Access-Control-Allow-Origin': '*' },
 })
 
-HTTP.interceptors.request.use((config) => {
-  // Lấy token từ lưu trữ (localStorage, cookies, hoặc nơi khác)
-  const token = localStorage.getItem('token')
-  if (token) {
-    config.headers.Authorization = `Bearer ${token}`
-  }
-  return config
-})
+// Tạo một interceptor để xử lý này của token
+const token = localStorage.getItem('token').replace(/"/g, '')
+HTTP.defaults.headers.common['Authorization'] = `Bearer ${token}`
 // Tạo một interceptor để xử lý mã lỗi HTTP
 HTTP.interceptors.response.use(
   (response) => {
@@ -30,6 +26,9 @@ HTTP.interceptors.response.use(
       const { status } = error.response
 
       if (status === 401) {
+        removeLocalStorage('token')
+        removeLocalStorage('email')
+        removeLocalStorage('userId')
         window.location.href = '/login'
       } else if (status === 403) {
         // Xử lý mã lỗi 403 (Forbidden)

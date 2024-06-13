@@ -13,6 +13,7 @@
     "@hookform/resolvers": "^3.4.2",
     "@vitejs/plugin-react": "^4.3.0",
     "antd": "^5.3.3",
+    "antd-img-crop": "^4.22.0",
     "axios": "^1.7.2",
     "clsx": "^2.1.1",
     "react": "^18.2.0",

@@ -1,7 +1,8 @@
-import react from '@vitejs/plugin-react'
 import { fileURLToPath, URL } from 'node:url'
+import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 import svgr from 'vite-plugin-svgr'
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -13,8 +14,8 @@ export default defineConfig({
         svgProps: {
           // width: '24', // Đặt kích thước mặc định cho chiều rộng
           // height: '20',
-          fill:'#778CA2'// Đặt kích thước mặc định cho chiều cao
-        },// Thêm tất cả các thuộc tính SVG vào phần tử gốc
+          fill: '#778CA2', // Đặt kích thước mặc định cho chiều cao
+        }, // Thêm tất cả các thuộc tính SVG vào phần tử gốc
         svgoConfig: {
           plugins: [
             {

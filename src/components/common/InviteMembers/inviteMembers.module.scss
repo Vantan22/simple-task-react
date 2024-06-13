@@ -1,0 +1,49 @@
+.inviteMembers {
+  min-height: 80px;
+  border-radius: 6px;
+  border: 1px solid #E8ECEF;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding:12px;
+  width: 100%;
+  gap: 12px;
+
+}
+
+.tag {
+  padding: 4px 14px;
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
+  border-radius: 99px;
+  background: #F2F4F6;
+
+  span {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.1rem;
+    display: block;
+    color: #778CA2;
+  }
+
+  .delete {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.input {
+  height: 30px;
+  border-radius: 8px;
+  color: #252631;
+  border: none;
+  outline: none;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.1rem;
+}

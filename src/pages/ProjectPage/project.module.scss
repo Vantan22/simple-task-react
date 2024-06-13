@@ -32,3 +32,39 @@
 .views {
 
 }
+.drawer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+}
+.upload {
+  display: flex;
+  column-gap: 6px;
+  align-items: center;
+  justify-content: center;
+  margin: 34px 0;
+}
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-width: 435px;
+  max-height: 250px;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 24px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+}
+.footerDrawer {
+  padding: 16px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

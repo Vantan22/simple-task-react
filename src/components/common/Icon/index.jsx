@@ -1,6 +1,7 @@
 import addClear from '@icons/ic_add_clear.svg?react'
 import ic_add from '@icons/ic_add.svg?react'
 import App from '@icons/ic_app.svg?react'
+import arrowTop from '@icons/ic_arrow_top.svg?react'
 import billing from '@icons/ic_billing.svg?react'
 import ic_calendar from '@icons/ic_calendar.svg?react'
 import ic_contact from '@icons/ic_contact.svg?react'
@@ -50,6 +51,7 @@ const Icons = {
   addClear,
   grid,
   list,
+  arrowTop,
   // Add more Icons as needed
 }
 

@@ -15,6 +15,7 @@ const UseAuth = () => {
         password,
       })
       const userInfo = response
+      console.log(userInfo)
       setLocalStorage('token', userInfo.token) // Giả sử API trả về thông tin user trong response.data
       dispatch({
         type: 'LOGIN',
