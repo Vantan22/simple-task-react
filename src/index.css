@@ -38,3 +38,14 @@ html {
 .ant-collapse-item.ant-collapse-item-active {
   margin-bottom: 16px;
 }
+
+.ant-radio-group {
+  margin-bottom: 0 !important;
+}
+.ant-radio-button {
+  height: 34px;
+  line-height: 34px;
+}
+.ant-radio-button-wrapper-checked {
+  border-color: #E8ECEF !important;
+}

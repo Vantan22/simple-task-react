@@ -10,7 +10,7 @@
     top: 0;
     bottom: 0;
     width: 252px;
-    transition: width 0.3s;
+    transition: width 0.3s linear;
     height: 100vh;
     border-right: 1px solid #E8E8E8;
 
@@ -31,11 +31,11 @@
 
   .content {
     margin-left: 252px;
-    height: calc(100vh - 65px);
+    height: 100vh;
     flex: 1;
+    background: #F8FAFB;
 
     .body {
-      height: 100%;
     }
   }
 
