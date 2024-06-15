@@ -20,7 +20,7 @@ const ConfirmationPage = () => {
     resolver: yupResolver(ConfirmationCodeSchema),
   })
   const { confirmationCode } = useAuth()
-  const email = getLocalStorage('email').replace(/"/g, '')
+  const email = getLocalStorage('email')
 
   const onSubmit = async (data) => {
     await confirmationCode({ email, ...data })

@@ -1,7 +1,7 @@
 import { forwardRef } from 'react'
 import styles from './inputBasic.module.scss'
 
-const InputBasic = forwardRef(({ name, id, label, width, status, ...props }, ref) => {
+const InputBasic = forwardRef(({ name, id, label, width, status, value, ...props }, ref) => {
   let borderColor
   if (status === true) {
     borderColor = '#6DD230'

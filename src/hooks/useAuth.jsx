@@ -1,9 +1,11 @@
 import HTTP from '@/axios/axios-config.js'
+import { useNavigate } from 'react-router-dom'
 import { useUserContext } from '@context/user-context.jsx'
 import { removeLocalStorage, setLocalStorage } from '@/contains/LocalStorage/index.js'
 
 const UseAuth = () => {
   const { dispatch } = useUserContext()
+  const navigate = useNavigate()
   const login = async ({ email, password }) => {
     console.log({
       email,
@@ -15,7 +17,7 @@ const UseAuth = () => {
         password,
       })
       const userInfo = response
-      console.log(userInfo)
+      console.log(userInfo.token)
       setLocalStorage('token', userInfo.token) // Giả sử API trả về thông tin user trong response.data
       dispatch({
         type: 'LOGIN',
@@ -33,6 +35,9 @@ const UseAuth = () => {
       type: 'LOGOUT',
       payload: null,
     })
+    removeLocalStorage('token')
+    removeLocalStorage('userId')
+    navigate('/login')
   }
   const registerUser = async ({ fullName, email, password }) => {
     try {

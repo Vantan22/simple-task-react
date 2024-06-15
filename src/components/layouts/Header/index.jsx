@@ -1,5 +1,7 @@
 import { memo } from 'react'
 import { Avatar, Popover } from 'antd'
+import useAuth from '@hooks/useAuth.jsx'
+import Button from '@common/Button/index.jsx'
 import Icons from '@common/Icon'
 import SideBarItemDefault from '@common/SideBar/SideBarItemDefault/index.jsx'
 import { useMenuContext } from '@context/MenuProvider/index.jsx'
@@ -15,7 +17,7 @@ const Header = () => {
       <SideBarItemDefault content="create new event" icon="calendar" />
     </div>
   )
-
+  const { logout } = useAuth()
   const handleClick = () => {
     setIsMenuCollapse(!isMenuCollapse)
   }
@@ -46,7 +48,18 @@ const Header = () => {
           </Popover>
         </div>
         <div style={{ cursor: 'pointer' }}>
-          <Popover content={content} cursor="pointer">
+          <Popover
+            content={
+              <Button
+                clicked={() => {
+                  logout()
+                }}
+              >
+                Logout
+              </Button>
+            }
+            cursor="pointer"
+          >
             <Avatar size={36}>{'user'}</Avatar>
           </Popover>
         </div>

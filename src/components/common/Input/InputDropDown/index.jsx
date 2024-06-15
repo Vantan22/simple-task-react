@@ -3,7 +3,7 @@ import { PlusOutlined } from '@ant-design/icons'
 import { Button, Divider, Input, Select, Space } from 'antd'
 
 let index = 0
-const InputDropDown = () => {
+const InputDropDown = ({ valueChange }) => {
   const [items, setItems] = useState(['Development', 'Design', 'Marketing', 'Customer Service', 'Sales', 'Ads'])
   const [name, setName] = useState('')
   const inputRef = useRef(null)
@@ -23,7 +23,10 @@ const InputDropDown = () => {
       style={{
         width: 300,
       }}
-      placeholder="custom dropdown render"
+      onChange={(value) => {
+        valueChange(value)
+      }}
+      placeholder="Select category"
       dropdownRender={(menu) => (
         <>
           {menu}
@@ -38,7 +41,7 @@ const InputDropDown = () => {
             }}
           >
             <Input
-              placeholder="Please enter item"
+              placeholder="Please enter new category"
               ref={inputRef}
               value={name}
               onChange={onNameChange}

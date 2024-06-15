@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { removeLocalStorage } from '@/contains/LocalStorage/index.js'
+import { getLocalStorage, removeLocalStorage } from '@/contains/LocalStorage/index.js'
 
 // Tạo một phiên axios
 const HTTP = axios.create({
@@ -8,8 +8,11 @@ const HTTP = axios.create({
 })
 
 // Tạo một interceptor để xử lý này của token
-const token = localStorage.getItem('token').replace(/"/g, '')
-HTTP.defaults.headers.common['Authorization'] = `Bearer ${token}`
+const token = getLocalStorage('token')
+if (token) {
+  HTTP.defaults.headers.common['Authorization'] = `Bearer ${token}`
+}
+
 // Tạo một interceptor để xử lý mã lỗi HTTP
 HTTP.interceptors.response.use(
   (response) => {

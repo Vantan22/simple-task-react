@@ -19,7 +19,7 @@ const ResetPasswordPage = () => {
   } = useForm({
     resolver: yupResolver(NewPasswordSchema),
   })
-  const email = getLocalStorage('email')?.replace(/"/g, '')
+  const email = getLocalStorage('email')
   const resetCode = getLocalStorage('resetCode')
   const { recoverPassword } = useAuth()
 

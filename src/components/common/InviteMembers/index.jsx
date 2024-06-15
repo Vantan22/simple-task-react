@@ -4,7 +4,7 @@ import { PlusOutlined } from '@ant-design/icons'
 import { Button, Divider, Input, Select, Space } from 'antd'
 import Label from '@common/Label/index.jsx'
 
-const InviteMembers = () => {
+const InviteMembers = ({ values }) => {
   const [items, setItems] = useState([])
   const [email, setEmail] = useState('')
   const inputRef = useRef(null)
@@ -34,6 +34,7 @@ const InviteMembers = () => {
           width: 300,
         }}
         mode="multiple"
+        onChange={(e) => values(e)}
         placeholder="custom dropdown render"
         dropdownRender={(menu) => (
           <>
